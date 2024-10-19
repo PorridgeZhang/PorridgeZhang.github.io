@@ -1,0 +1,141 @@
+@media (min-aspect-ratio: 4/3) {
+  body {
+    max-width: 75%;
+    margin: 0 auto; 
+    padding: 2em;
+  line-height: 1.5;
+  color: #414548;
+  }
+}
+
+
+@media (max-aspect-ratio: 4/3) {
+  body {
+    width: 1080px;       /* 强制页面宽度为 1024px */
+    overflow-x: scroll;  /* 出现水平滚动条 */
+    padding: 2em;
+    box-sizing: border-box;
+    line-height: 1.5;
+    color: #414548; 
+  }
+}
+
+.red{
+  color: #bd0000;
+}
+
+a{
+  color: #1b63bb;
+}
+
+h2, h3{
+  margin-top: 40px; /* 设置上方的空白为 20 像素 */
+}
+
+h2::after ,
+h3::after {
+  content: "";
+  display: block;
+  margin: 0.5em 0;
+  border: 0;
+  border-top:1px solid #f2f3f3
+}
+
+h1 img, h2 img, h3 img, h4 img{
+  height: 1.5em; /* 使图片高度与当前字体大小相同 */
+  vertical-align: middle; /* 垂直居中对齐 */
+}
+h6{
+  margin-top: 0px;
+  text-align:  center;
+}
+h6 img {
+                /* 默认宽度为40% */
+  height: auto;              /* 高度自适应宽度 */
+  vertical-align: middle;    /* 图片垂直居中 */
+  max-width: 50%;            /* 最大宽度不超过50% */
+  max-height: 200px;         /* 最大高度不超过200像素 */
+}
+
+
+/* header and footer areas */
+.menu { padding: 0; }
+.menu li { display: inline-block; margin-right: 5px;  /* 添加右侧的5px间距 */}
+.article-meta, .menu a {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px;
+  border-radius: 5px;
+}
+.menu, .article-meta, footer { text-align: center; }
+.title { font-size: 1.1em; }
+footer a { text-decoration: none; }
+/*hr {
+  border-style: dashed;
+  color: #ddd;
+}*/
+hr {
+  display: block;
+  margin: 1em 0;
+  border: 0;
+  border-top:1px solid #f2f3f3
+}
+/* code */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+}
+code { background: #f9f9f9; }
+pre code { background: none; }
+
+/* misc elements */
+/*img, iframe, video { max-width: 100%; }*/
+main { hyphens: auto; }
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+
+.pics_in_a_row {
+  margin: 5px 0;
+  display: flex;
+}
+
+.pics_in_a_row > div:not(:last-child) {
+  margin-right: 5px;
+}
+
+.pics_in_a_row_small {
+  margin: 5px auto;
+  display: flex;
+  width: 50%;
+  text-align: center;
+  justify-content: center;  /* 水平居中 */
+}
+
+.pics_in_a_row_small div {
+  display: inline-block;
+}
+
+.pics_in_a_row_small > div:not(:last-child) {
+  margin-right: 5px;
+}
+
+div img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

@@ -1,0 +1,58 @@
+baseurl: "https://zhouhaozhang.github.io/"
+languageCode: "en-us"
+title: "Zhouhao Zhang's personal webpage"
+theme: "xmin"
+googleAnalytics: ""
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  note: "/note/:year/:month/:day/:slug/"
+  post: "/post/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    # - name: About
+    #   url: "about/"
+    #   weight: 2
+    # - name: Categories
+    #   url: "categories/"
+    #   weight: 3
+    # - name: Tags
+    #   url: "tags/"
+    #   weight: 4
+    # - name: Subscribe
+    #   url: "index.xml"
+    - name: CV
+      url: "./pdfs/CV.pdf"
+      weight: 2
+    - name: Contact Me
+      url: "mailto:zhouhaozhang@buaa.edu.cn"
+      weight: 3
+
+params:
+  description: "Zhouhao Zhang's personal webpage"
+  footer: "&copy; [Zhouhao Zhang](https://zhouhaozhang.github.io) {Year} | [Github](https://github.com/zhouhaozhang) | [Bilibili](https://space.bilibili.com/630152243?spm_id_from=333.1007.0.0)"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
