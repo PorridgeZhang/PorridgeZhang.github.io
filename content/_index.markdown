@@ -17,7 +17,7 @@ My name is Zhouhao Zhang, I'm currently a research intern at [Zhipu AI](https://
 Prior to this, I got my Bachelor's degree in Automation from [Beihang University](https://ev.buaa.edu.cn). I was honored with the National Scholarship and got national third place in the 2024 China University Robot Competition (ROBOCON).
 
 ## 🦾 My Skills
-* **Languages**: Chinese (Native), English (TOEFL: 93)
+* **Languages**: Chinese (Native), English (TOEFL: 96)
 * **Programming Languages**: Python, C, C++
 * **Robot Development Environments**: Linux, ROS, ROS2, Gazebo, PyBullet, MATLAB, SolidWorks
 * **Development Libraries**: Pytorch, OpenCV, OpenAI Gym, PCL, Eigen
@@ -71,9 +71,9 @@ Skyforce Technology <img src="./images/skyforce_logo.png" alt="Skyforce"> <div s
 </h3>
 I interned at a startup, where I developed automatic keystone correction algorithms for projectors using both structured light and Time-of-Flight (TOF) technologies.
 
-* [Auto Keystone Correction with Structured Light](./internship/auto%20keystone%20correction%20projector%20with%20camera/README.md): This project focused on using local homography and Gray code for calibration. The correction process involved triangulating the depth of key points and fitting the projection plane, while an accelerometer measured the direction of gravity. The homography matrix was computed by correlating key points on the wall with those on the projection screen, allowing for reconstructing the display area. The goal was to maximize the size and sharpness of the inner rectangle within an arbitrary convex projection. A national invention patent for this work is pending.
+* [Auto Keystone Correction with Structured Light](https://github.com/ZhouhaoZhang/My_Project_Portfolio/blob/main/internship/auto%20keystone%20correction%20projector%20with%20camera/README.md): This project focused on using local homography and Gray code for calibration. The correction process involved triangulating the depth of key points and fitting the projection plane, while an accelerometer measured the direction of gravity. The homography matrix was computed by correlating key points on the wall with those on the projection screen, allowing for reconstructing the display area. The goal was to maximize the size and sharpness of the inner rectangle within an arbitrary convex projection. A national invention patent for this work is pending.
 
-* [Auto Keystone Correction Projector with TOF](./internship/auto%20keystone%20correction%20projector%20with%20TOF/): This project utilized the VL53L5CX multi-point TOF sensor to detect the projection plane. Data stability was enhanced through filtering, and robustness was improved using the Random Sample Consensus (RANSAC) algorithm. The projection system of the ultra-short-throw projector was modeled using an equivalent ideal pinhole.
+* [Auto Keystone Correction Projector with TOF](https://github.com/ZhouhaoZhang/My_Project_Portfolio/tree/main/internship/auto%20keystone%20correction%20projector%20with%20TOF): This project utilized the VL53L5CX multi-point TOF sensor to detect the projection plane. Data stability was enhanced through filtering, and robustness was improved using the Random Sample Consensus (RANSAC) algorithm. The projection system of the ultra-short-throw projector was modeled using an equivalent ideal pinhole.
   <div class='pics_in_a_row'>
     <div style="flex:1.332812;">
       <img src='./images/projector.jpg'>
@@ -107,7 +107,7 @@ I was a member of the BR Robotics Team for two years, representing Beihang Unive
     <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1006197069&bvid=BV1qx4y1x7nz&cid=1612987246&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 45%; aspect-ratio: 16 / 9;"></iframe>
 </div>
 
-* [Auto-shoot Algorithm for Racing Robot in CURC ROBOCON 2023](./robotics%20team%20of%20BUAA/ROBOCON2023/): This algorithm combines LiDAR, wheel odometry, and IMU data for target localization, while a deep learning model identifies and tracks targets. The localization data refines the shooting accuracy by calculating angular deviations, which are then transmitted to the motor driver. The performance in the 2023 CURC ROBOCON competition validated the algorithm’s precision and robustness.   
+* [Auto-shoot Algorithm for Racing Robot in CURC ROBOCON 2023](https://github.com/ZhouhaoZhang/My_Project_Portfolio/tree/main/robotics%20team%20of%20BUAA/ROBOCON2023): This algorithm combines LiDAR, wheel odometry, and IMU data for target localization, while a deep learning model identifies and tracks targets. The localization data refines the shooting accuracy by calculating angular deviations, which are then transmitted to the motor driver. The performance in the 2023 CURC ROBOCON competition validated the algorithm’s precision and robustness.   
   <div class='pics_in_a_row'>
     <div style="flex:1.848592;">
       <img src='./images/RC2023_field.jpg'>
@@ -135,7 +135,7 @@ I was a member of the BR Robotics Team for two years, representing Beihang Unive
     </div>
   </div>
 
-* [Decision-making algorithm for autonomous robots for ROBOCON 2024](./robotics%20team%20of%20BUAA/ROBOCON2024/): This competition required the development of an advanced decision-making algorithm to win by strategically occupying zones in the competition. A minimax search algorithm with alpha-beta pruning was implemented. Finite state machine was used to manage the robot's behavior.
+* [Decision-making algorithm for autonomous robots for ROBOCON 2024](https://github.com/ZhouhaoZhang/My_Project_Portfolio/tree/main/robotics%20team%20of%20BUAA/ROBOCON2024): This competition required the development of an advanced decision-making algorithm to win by strategically occupying zones in the competition. A minimax search algorithm with alpha-beta pruning was implemented. Finite state machine was used to manage the robot's behavior.
   <div class='pics_in_a_row'>
     <div style="flex:1.261580;">
       <img src='./images/RC2024_field.jpg'>
@@ -161,7 +161,7 @@ I was a member of the BR Robotics Team for two years, representing Beihang Unive
     </div>
   </div>
 
-* [Team entry test](./robotics%20team%20of%20BUAA/training/README.md): This test, designed for new team members, required camera pose estimation using the Perspective-n-Point (PNP) algorithm. By detecting corner points and establishing correspondences between 2D images and known 3D coordinates, the camera’s trajectory was calculated.
+* [Team entry test](https://github.com/ZhouhaoZhang/My_Project_Portfolio/tree/main/robotics%20team%20of%20BUAA/training): This test, designed for new team members, required camera pose estimation using the Perspective-n-Point (PNP) algorithm. By detecting corner points and establishing correspondences between 2D images and known 3D coordinates, the camera’s trajectory was calculated.
   <div class='pics_in_a_row'>
     <div style="flex:1.781991;">
       <img src='./images/pnp.gif'>
@@ -288,7 +288,7 @@ I take each experiment seriously, cherish these practical opportunities, and alw
     </div>
   </div>
 
-* [Experiments on Eight-Puzzle graph search algorithms](./in-class%20experiments/8dig): Using BFS, DFS, and A* algorithms, I applied graph search strategies to solve the eight-puzzle problem. Through this experiment, we analyzed the differences in search strategies and performance.
+* [Experiments on Eight-Puzzle graph search algorithms](https://github.com/ZhouhaoZhang/My_Project_Portfolio/tree/main/in-class%20experiments/8dig): Using BFS, DFS, and A* algorithms, I applied graph search strategies to solve the eight-puzzle problem. Through this experiment, we analyzed the differences in search strategies and performance.
 
 
   <div class='pics_in_a_row_small'>
@@ -301,7 +301,7 @@ I take each experiment seriously, cherish these practical opportunities, and alw
   </div>
 
 
-* [Comparison experiments between CNN and Dense](./in-class%20experiments/Comparison%20experiments%20between%20CNN%20and%20Dense/README.md):  Inspired by Prof. Li Mu’s Dive into Deep Learning, I constructed various classic neural networks for the MNIST and Fashion MNIST datasets, comparing their performances. I also visualized layer-wise results for LeNet to better understand the mechanics of CNNs. Additionally, I tested LeNet on handwritten Arabic characters.
+* [Comparison experiments between CNN and Dense](https://github.com/ZhouhaoZhang/My_Project_Portfolio/blob/main/in-class%20experiments/Comparison%20experiments%20between%20CNN%20and%20Dense/README.md):  Inspired by Prof. Li Mu’s Dive into Deep Learning, I constructed various classic neural networks for the MNIST and Fashion MNIST datasets, comparing their performances. I also visualized layer-wise results for LeNet to better understand the mechanics of CNNs. Additionally, I tested LeNet on handwritten Arabic characters.
   <div class='pics_in_a_row'>
     <div style="flex:1.0654;">
       <img src='images/cnn.png'>
@@ -315,7 +315,7 @@ I take each experiment seriously, cherish these practical opportunities, and alw
   </div>
 
 
-* [Experiments on Medical Image segmentation (Liver)](./in-class%20experiments/Experiments%20on%20Medical%20Image%20segmentation/liver/README.md), [(Retinal vessels)](./in-class%20experiments/Experiments%20on%20Medical%20Image%20segmentation/Retinal%20vessels/README.md) In this experiment, I reproduced U-Net using PyTorch and optimized its hyperparameters to train effectively on a small dataset. While working on liver CT segmentation, I tackled the challenge of uneven data distribution by applying normalization, leading to successful results.
+* [Experiments on Medical Image segmentation (Liver)](https://github.com/ZhouhaoZhang/My_Project_Portfolio/blob/main/in-class%20experiments/Experiments%20on%20Medical%20Image%20segmentation/liver/README.md), [(Retinal vessels)](https://github.com/ZhouhaoZhang/My_Project_Portfolio/blob/main/in-class%20experiments/Experiments%20on%20Medical%20Image%20segmentation/Retinal%20vessels/README.md) In this experiment, I reproduced U-Net using PyTorch and optimized its hyperparameters to train effectively on a small dataset. While working on liver CT segmentation, I tackled the challenge of uneven data distribution by applying normalization, leading to successful results.
 
   <div class='pics_in_a_row'>
     <div style="flex:2.637209;">
@@ -332,7 +332,7 @@ I take each experiment seriously, cherish these practical opportunities, and alw
     </div>
   </div>
 
-* [EEG-based Motor Imagery Classification](./in-class%20experiments/EEG-based%20Motor%20Imagery%20Classification/README.md): I implemented the EEGNet network to classify motor imagery using EEG signals. Through this experiment, I gained a deep understanding of convolution techniques like group, depth-wise, and point-wise convolutions. My model achieved top rankings in both binary and four-class classification tasks within the class.
+* [EEG-based Motor Imagery Classification](https://github.com/ZhouhaoZhang/My_Project_Portfolio/blob/main/in-class%20experiments/EEG-based%20Motor%20Imagery%20Classification/README.md): I implemented the EEGNet network to classify motor imagery using EEG signals. Through this experiment, I gained a deep understanding of convolution techniques like group, depth-wise, and point-wise convolutions. My model achieved top rankings in both binary and four-class classification tasks within the class.
     
   <div class='pics_in_a_row'>
     <div style="flex:2.064655;">
@@ -343,12 +343,12 @@ I take each experiment seriously, cherish these practical opportunities, and alw
     </div>
   </div>
 
-* [Robot path planning experiments](./in-class%20experiments/Robot%20path%20planning%20experiments/README.md) I explored the differences in various heuristic functions in robot path planning tasks and summarized my findings in an experimental report.
+* [Robot path planning experiments](https://github.com/ZhouhaoZhang/My_Project_Portfolio/blob/main/in-class%20experiments/Robot%20path%20planning%20experiments/README.md) I explored the differences in various heuristic functions in robot path planning tasks and summarized my findings in an experimental report.
   <div align="center">
     <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=953162139&bvid=BV1Us4y1g7rq&cid=1116087360&p=1" scrolling="no" frameborder="no" width=440 style="width: 45%; aspect-ratio: 16 / 9;"></iframe>
   </div>
 
-* [GMM Built by Expectation-Maximization Algorithm](./in-class%20experiments/GMM%20Built%20by%20EM%20Algorithm/) Given a dataset, I used the Expectation-Maximization algorithm to fit a Gaussian mixture model to it and determine the parameters of the distribution.
+* [GMM Built by Expectation-Maximization Algorithm](https://github.com/ZhouhaoZhang/My_Project_Portfolio/tree/main/in-class%20experiments/GMM%20Built%20by%20EM%20Algorithm) Given a dataset, I used the Expectation-Maximization algorithm to fit a Gaussian mixture model to it and determine the parameters of the distribution.
 
     <h6>
       <img src="./images/gmm.jpg"/>
