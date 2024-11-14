@@ -6,7 +6,7 @@ title: Home
 
 
 
-# Zhouhao Zhang
+# Zhouhao Zhang (张洲浩)
 
 #### *Hi, welcome to my homepage!* 🤗
 
@@ -26,7 +26,7 @@ Prior to this, I got my Bachelor's degree in Automation from [Beihang University
 
 ## 🏅 My Awards
 *Click on the title to view the certificate*
-* **<a href="./CV.pdf" style="text-decoration:none; color:inherit;">National Scholarship</a>** | <span class="red">Top 3 out of 236</span>, The Ministry of Education of the People's Republic of China<div style="float: right;">Dec 2022</div>
+* **<a href="./CV.pdf" style="text-decoration:none; color:inherit;">National Scholarship</a>** | <span class="red">National 0.2%</span>, The Ministry of Education of the People's Republic of China<div style="float: right;">Dec 2022</div>
 * **First Prize, 23rd China University Robot Competition (ROBOCON)** | <span class="red">National Third Place</span><div style="float: right;">Jul 2024</div>
 * **Second Prize, 23rd China University Robot Competition (RoboMaster)**<div style="float: right;">Apr 2024</div>
 * **Second Prize, 22nd China University Robot Competition (ROBOCON)**<div style="float: right;">Jul 2023</div>
@@ -35,12 +35,12 @@ Prior to this, I got my Bachelor's degree in Automation from [Beihang University
 * **Second Prize, China Intelligent Robot Fighting and Gaming Competition**<div style="float: right;">Mar 2023</div>
 * **Third Prize, 38th National College Physics Competition**<div style="float: right;">Dec 2021</div>
 * **Outstanding Graduate Award** | Beihang University<div style="float: right;">Jun 2024</div>
-* **CATIC Scholarship** | <span class="red">Total 10 Places in Beihang University</span><div style="float: right;">Dec 2023</div>
+* **CATIC Scholarship** | <span class="red">Total 10 Places (0.3%) in Beihang University </span><div style="float: right;">Dec 2023</div>
 * **First Prize, Scholarship in Discipline Competition** | Beihang University<div style="float: right;">Nov 2023</div>
 * **Second Prize, Scholarship in Outstanding Social Work** | Beihang University<div style="float: right;">Nov 2023</div>
 * **Outstanding Student Leader** | Beihang University<div style="float: right;">Nov 2023</div>
-* **Top Prize, Learning Excellence Scholarship** | <span class="red">Top 3 out of 154</span>, Beihang University<div style="float: right;">Dec 2022</div>
-* **Outstanding Student** | <span class="red">Top 2 out of 154</span>, Beihang University<div style="float: right;">Sep 2022</div>
+* **Top Prize, Learning Excellence Scholarship** | <span class="red">Top 2%</span>, Beihang University<div style="float: right;">Dec 2022</div>
+* **Outstanding Student** | <span class="red">Top 1%</span>, Beihang University<div style="float: right;">Sep 2022</div>
 * **Third Prize, 32nd FengRu Cup Competition & Yuyuan Robots Competition** | Beihang University<div style="float: right;">Jun 2022</div>
 
 ## 🧑🏻‍💻 Internship
