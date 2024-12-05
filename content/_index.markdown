@@ -17,16 +17,19 @@ My name is Zhouhao Zhang, I'm currently a research intern at [Zhipu AI](https://
 Prior to this, I got my Bachelor's degree in Automation from [Beihang University](https://ev.buaa.edu.cn). I was honored with the National Scholarship and got national third place in the 2024 China University Robot Competition (ROBOCON).
 
 ## 🦾 My Skills
-* **Languages**: Chinese (Native), English (TOEFL: 96)
+* **Languages**: Chinese (Native), English (TOEFL: 98)
 * **Programming Languages**: Python, C, C++
 * **Robot Development Environments**: Linux, ROS, ROS2, Gazebo, PyBullet, MATLAB, SolidWorks
 * **Development Libraries**: Pytorch, OpenCV, OpenAI Gym, PCL, Eigen
 * **Robot Hardware**: Diﬀerential/Omni-directional/Quadruped Chassis, Robotic Arms, LiDAR, Depth Camera, IMU, TOF
 * **Embedded Systems**: NVIDIA Jetson, Raspberry Pi, STM32, ESP32, Arduino
 
+## 📑 Publication
+
+* **[An Aerial–Aquatic Hitchhiking Robot with Remora-Inspired Tactile Sensors and Thrust Vectoring Units](https://onlinelibrary.wiley.com/doi/full/10.1002/aisy.202300381)** in Advanced Intelligent Systems
+
 ## 🏅 My Awards
-*Click on the title to view the certificate*
-* **<a href="./CV.pdf" style="text-decoration:none; color:inherit;">National Scholarship</a>** | <span class="red">National 0.2%</span>, The Ministry of Education of the People's Republic of China<div style="float: right;">Dec 2022</div>
+* **National Scholarship** | <span class="red">National 0.2%</span>, The Ministry of Education of the People's Republic of China<div style="float: right;">Dec 2022</div>
 * **First Prize, 23rd China University Robot Competition (ROBOCON)** | <span class="red">National Third Place</span><div style="float: right;">Jul 2024</div>
 * **Second Prize, 23rd China University Robot Competition (RoboMaster)**<div style="float: right;">Apr 2024</div>
 * **Second Prize, 22nd China University Robot Competition (ROBOCON)**<div style="float: right;">Jul 2023</div>
