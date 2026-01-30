@@ -301,32 +301,51 @@ video {
     margin: 1rem 0;
     overflow-x: auto;
     overflow-y: hidden;
-    height: 200px; /* Unified Height */
-    
-    /* Scrollbar Hiding */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-    
-    /* Edge Fade Gradient */
-    mask-image: linear-gradient(to right, transparent, black 5% 95%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15px, black calc(100% - 15px), transparent);
+    height: 200px;
+    /* Unified Height */
+
+    /* Edge Fade Gradient - Optional, keeping for visual hint,
+       but reducing slightly so scrollbar is clear */
+    mask-image: linear-gradient(to right, transparent, black 2% 98%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10px, black calc(100% - 10px), transparent);
 }
 
+/* Custom Horizontal Scrollbar */
 .gallery-row::-webkit-scrollbar,
 .video-grid::-webkit-scrollbar {
-    display: none;
+    height: 8px;
+    /* Visible height */
+    display: block;
 }
 
-/* Animation Classes */
-.gallery-animate-init {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+.gallery-row::-webkit-scrollbar-track,
+.video-grid::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 0 10px;
+    /* Offset from edges */
 }
 
-.gallery-animate-active {
-    opacity: 1;
-    transform: translateX(0);
+.gallery-row::-webkit-scrollbar-thumb,
+.video-grid::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.gallery-row:hover::-webkit-scrollbar-thumb,
+.video-grid:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode scrollbar */
+[data-theme="dark"] .gallery-row::-webkit-scrollbar-thumb,
+[data-theme="dark"] .video-grid::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .gallery-row:hover::-webkit-scrollbar-thumb,
+[data-theme="dark"] .video-grid:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 /* The item in the row */
@@ -334,10 +353,13 @@ video {
 .gallery-item,
 .video-grid iframe {
     height: 100%;
-    flex: 0 0 auto; /* Stop shrinking/growing */
+    flex: 0 0 auto;
+    /* Stop shrinking/growing */
     width: auto;
-    border-radius: 0; /* Remove radius */
-    aspect-ratio: auto; /* Reset aspect ratio for iframes if set inline */
+    border-radius: 0;
+    /* Remove radius */
+    aspect-ratio: auto;
+    /* Reset aspect ratio for iframes if set inline */
 }
 
 /* Specific fix for iframes to maintain ratio if needed, or just let height dictate width */
@@ -352,7 +374,8 @@ video {
     width: auto;
     object-fit: contain;
     display: block;
-    border-radius: 0; /* Remove radius */
+    border-radius: 0;
+    /* Remove radius */
 }
 
 /* For Logo next to H3 */

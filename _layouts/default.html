@@ -70,43 +70,24 @@
                 });
             });
 
-            // Gallery Scroll Animation
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.2
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('gallery-animate-active');
-                        observer.unobserve(entry.target); // Only animate once
-                    }
-                });
-            }, observerOptions);
-
-            const galleries = document.querySelectorAll('.gallery-row, .video-grid');
-            galleries.forEach(gallery => {
-                gallery.classList.add('gallery-animate-init');
-                observer.observe(gallery);
+        });
             });
 
-            window.addEventListener('scroll', function () {
-                if (isAutoScrolling) return; // Skip if triggered by nav click
+        window.addEventListener('scroll', function () {
+            if (isAutoScrolling) return; // Skip if triggered by nav click
 
 
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-                if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-                    // Scrolling DOWN -> Hide
-                    header.classList.add('header-hidden');
-                } else {
-                    // Scrolling UP -> Show
-                    header.classList.remove('header-hidden');
-                }
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-            }, { passive: true });
+            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                // Scrolling DOWN -> Hide
+                header.classList.add('header-hidden');
+            } else {
+                // Scrolling UP -> Show
+                header.classList.remove('header-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, { passive: true });
         });
     </script>
 </body>
