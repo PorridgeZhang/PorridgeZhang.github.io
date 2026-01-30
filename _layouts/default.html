@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons if needed, can add later -->
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <!-- Navigation can go here if needed, for now just the title -->
+            <h1>{{ site.title }}</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#awards">Awards</a>
+                <a href="#internships">Internships</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="layout-wrapper">
+        {% include sidebar.html %}
+        <main class="page-content" aria-label="Content">
+            <div class="container">
+                {{ content }}
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. Powered by Jekyll.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastScrollTop = 0;
+            const header = document.querySelector('.site-header');
+            const scrollThreshold = 100;
+            let isAutoScrolling = false;
+
+            // Handle Nav Clicks
+            const navLinks = document.querySelectorAll('.site-header nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    isAutoScrolling = true;
+                    // Reset after transition usually finishes (1s is generous)
+                    setTimeout(() => {
+                        isAutoScrolling = false;
+                    }, 1000);
+                });
+            });
+
+            // Gallery Scroll Animation
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('gallery-animate-active');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const galleries = document.querySelectorAll('.gallery-row, .video-grid');
+            galleries.forEach(gallery => {
+                gallery.classList.add('gallery-animate-init');
+                observer.observe(gallery);
+            });
+
+            window.addEventListener('scroll', function () {
+                if (isAutoScrolling) return; // Skip if triggered by nav click
+
+
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                    // Scrolling DOWN -> Hide
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scrolling UP -> Show
+                    header.classList.remove('header-hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }, { passive: true });
+        });
+    </script>
+</body>

@@ -1,0 +1,13 @@
+title: Zhouhao Zhang
+author: Zhouhao Zhang
+email: porridge0216@gmail.com
+description: >-
+  Personal homepage of Zhouhao Zhang
+baseurl: ""
+url: ""
+
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

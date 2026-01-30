@@ -1,0 +1,391 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #111111;
+    --link-color: #0066cc;
+    --accent-color: #eef4fb;
+    --border-color: #eaeaea;
+    --code-bg: #f6f8fa;
+
+    --font-main: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --max-width: 900px;
+    --spacing: 1.5rem;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --link-color: #58a6ff;
+    --accent-color: #2d333b;
+    --border-color: #30363d;
+    --code-bg: #161b22;
+}
+
+box-sizing: border-box;
+}
+
+section {
+    scroll-margin-top: 100px;
+    /* Individual section offset */
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    /* Global offset for sticky header */
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Layout Wrapper */
+.layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+}
+
+@media (min-width: 768px) {
+    .layout-wrapper {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .sidebar {
+        flex: 0 0 250px;
+        position: sticky;
+        top: 100px;
+        /* Adjusted for sticky header height */
+        height: fit-content;
+    }
+
+    .page-content {
+        flex: 1;
+        min-width: 0;
+        /* Fix flex overflow */
+    }
+
+    /* Hide the old theme toggle in header since we might move it or keep it */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        border-bottom: none;
+        border-right: 1px solid var(--border-color);
+        padding-right: 2rem;
+        padding-top: 0;
+    }
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--border-color);
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    border-bottom: none;
+    /* Override default h2 border */
+}
+
+.profile-bio {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: var(--text-color);
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background-color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Header Adjustments */
+.site-header {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Semi-transparent for glass effect */
+    backdrop-filter: blur(12px);
+    /* Glassmorphism */
+    -webkit-backdrop-filter: blur(12px);
+    /* Safari support */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+}
+
+.site-header.header-hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+
+[data-theme="dark"] .site-header {
+    background-color: rgba(26, 26, 26, 0.85);
+    /* Dark mode semi-transparent */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.site-header nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.site-header nav a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Hide Nav Links on Small Screens */
+@media (max-width: 768px) {
+    .site-header nav a {
+        display: none;
+    }
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+/* Theme Toggle */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--accent-color);
+}
+
+[data-theme="dark"] .icon-sun {
+    display: inline-block;
+}
+
+[data-theme="dark"] .icon-moon {
+    display: none;
+}
+
+[data-theme="light"] .icon-sun {
+    display: none;
+}
+
+[data-theme="light"] .icon-moon {
+    display: inline-block;
+}
+
+/* Images & Videos */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    /* border-radius removed here too globally if you want, or just for galleries */
+}
+
+/* Gallery Row */
+/* Unified Horizontal Gallery */
+.gallery-row,
+.video-grid {
+    display: flex;
+    flex-wrap: nowrap !important;
+    gap: 10px;
+    margin: 1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 200px; /* Unified Height */
+    
+    /* Scrollbar Hiding */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    
+    /* Edge Fade Gradient */
+    mask-image: linear-gradient(to right, transparent, black 5% 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15px, black calc(100% - 15px), transparent);
+}
+
+.gallery-row::-webkit-scrollbar,
+.video-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Animation Classes */
+.gallery-animate-init {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.gallery-animate-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* The item in the row */
+/* Gallery Items */
+.gallery-item,
+.video-grid iframe {
+    height: 100%;
+    flex: 0 0 auto; /* Stop shrinking/growing */
+    width: auto;
+    border-radius: 0; /* Remove radius */
+    aspect-ratio: auto; /* Reset aspect ratio for iframes if set inline */
+}
+
+/* Specific fix for iframes to maintain ratio if needed, or just let height dictate width */
+.video-grid iframe {
+    aspect-ratio: 16/9;
+    width: auto;
+}
+
+.gallery-item img,
+.gallery-item video {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 0; /* Remove radius */
+}
+
+/* For Logo next to H3 */
+h3 img {
+    height: 1.2em;
+    /* Same height as text */
+    width: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* Utilities */
+.float-right {
+    float: right;
+}
+
+.red {
+    color: #d73a49;
+}
+
+/* GitHub style red */
+.muted {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}
