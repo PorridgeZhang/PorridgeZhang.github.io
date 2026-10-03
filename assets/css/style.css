@@ -531,6 +531,14 @@ video {
     justify-content: center;
 }
 
+#gallery .gallery-item {
+    min-width: 0;
+    overflow: visible;
+    border: 0;
+    border-radius:  12px;
+    background: transparent;
+}
+
 .video-grid iframe {
     width: auto !important;
     aspect-ratio: 16 / 9 !important;
