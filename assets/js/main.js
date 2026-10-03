@@ -37,12 +37,13 @@ function setupLazyVideos() {
     if (!videos.length) return;
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const saveData = navigator.connection && navigator.connection.saveData;
 
     const prepareVideo = (video) => {
         if (video.dataset.loaded === 'true') return;
 
         video.dataset.loaded = 'true';
-        video.preload = 'metadata';
+        video.preload = saveData ? 'metadata' : 'auto';
         video.load();
     };
 
@@ -74,7 +75,7 @@ function setupLazyVideos() {
             observer.unobserve(entry.target);
         });
     }, {
-        rootMargin: '400px 240px',
+        rootMargin: '1200px 320px',
         threshold: 0
     });
 
@@ -87,7 +88,8 @@ function setupLazyVideos() {
             else video.pause();
         });
     }, {
-        threshold: 0.35
+        rootMargin: '160px 0px',
+        threshold: 0.01
     });
 
     videos.forEach((video) => {
