@@ -64,9 +64,11 @@ a {
     transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
-a:hover {
-    color: var(--accent);
-    text-decoration-color: currentColor;
+@media (hover: hover) and (pointer: fine) {
+    a:hover {
+        color: var(--accent);
+        text-decoration-color: currentColor;
+    }
 }
 
 a:focus-visible {
@@ -147,9 +149,11 @@ h3 {
     text-decoration: none;
 }
 
-.site-brand:hover {
-    color: var(--heading);
-    text-decoration: none;
+@media (hover: hover) and (pointer: fine) {
+    .site-brand:hover {
+        color: var(--heading);
+        text-decoration: none;
+    }
 }
 
 .brand-mark {
@@ -354,11 +358,13 @@ section > h2::before {
     transition: background 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.social-link:hover {
-    background: var(--surface);
-    color: var(--accent-dark);
-    text-decoration: none;
-    transform: translateX(3px);
+@media (hover: hover) and (pointer: fine) {
+    .social-link:hover {
+        background: var(--surface);
+        color: var(--accent-dark);
+        text-decoration: none;
+        transform: translateX(3px);
+    }
 }
 
 .social-icon {
