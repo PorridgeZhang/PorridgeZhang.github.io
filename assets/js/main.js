@@ -1,14 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('theme-toggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Load saved theme or system preference
-    const currentTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    const navLinks = [...document.querySelectorAll('.primary-nav a')];
+    const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
 
-    toggle.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+    if (!('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visible) return;
+
+        navLinks.forEach((link) => {
+            const isActive = link.getAttribute('href') === `#${visible.target.id}`;
+            link.classList.toggle('is-active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+    }, {
+        rootMargin: '-18% 0px -64% 0px',
+        threshold: [0, 0.2, 0.5]
     });
+
+    sections.forEach((section) => observer.observe(section));
 });
