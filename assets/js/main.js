@@ -8,28 +8,43 @@ function setupNavigationHighlight() {
     const sections = navLinks
         .map((link) => document.querySelector(link.getAttribute('href')))
         .filter(Boolean);
+    const header = document.querySelector('.site-header');
 
-    if (!('IntersectionObserver' in window)) return;
+    if (!sections.length) return;
 
-    const observer = new IntersectionObserver((entries) => {
-        const visible = entries
-            .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    let updatePending = false;
 
-        if (!visible) return;
+    const updateActiveSection = () => {
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        const readingOffset = Math.min(window.innerHeight * 0.2, 180);
+        const activationLine = headerHeight + readingOffset;
+        let activeSection = sections[0];
+
+        sections.forEach((section) => {
+            if (section.getBoundingClientRect().top <= activationLine) {
+                activeSection = section;
+            }
+        });
 
         navLinks.forEach((link) => {
-            const isActive = link.getAttribute('href') === `#${visible.target.id}`;
+            const isActive = link.getAttribute('href') === `#${activeSection.id}`;
             link.classList.toggle('is-active', isActive);
             if (isActive) link.setAttribute('aria-current', 'location');
             else link.removeAttribute('aria-current');
         });
-    }, {
-        rootMargin: '-18% 0px -64% 0px',
-        threshold: [0, 0.2, 0.5]
-    });
 
-    sections.forEach((section) => observer.observe(section));
+        updatePending = false;
+    };
+
+    const scheduleUpdate = () => {
+        if (updatePending) return;
+        updatePending = true;
+        window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
 }
 
 function setupLazyVideos() {
