@@ -9,5 +9,5 @@ title: Home
 {% include section-awards.html %}
 {% include section-internships.html %}
 {% include section-projects.html %}
-{% include section-course-projects.html %}
+
 {% include section-gallery.html %}
